@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find longest string from a given array</title>
+</head>
+<body>
+    <label>Enter a sentence to find the longest word from a given sentence </label>
+    <input type="text" id="txt">
+
+    <br>   <br>   <br>
+    <button type="submit" id="btn">Click Me</button>
+
+    <p class="output"></p>
+
+<script>
+    let clickBtn = document.querySelector('#btn');
+    clickBtn.addEventListener('click', longestWord);
+
+    function longestWord(){
+
+        word = document.querySelector('#txt').value;
+        let array = word.split(' ');
+        console.log(array);
+        console.log(array.length);
+        let count = 0;
+        let longest;
+        for(i = 0; i<array.length; i++)
+            {
+                if(array[i].length > count)
+                {
+                count = array[i].length;
+                longest = array[i];
+                }
+
+              
+
+              
+            }
+       
+            console.log(longest); 
+            document.querySelector('.output').innerHTML='The longest word is:- ' +longest;
+
+
+
+    }
+
+    
+
+</script>
+    
+</body>
+</html>
